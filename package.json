@@ -4,7 +4,7 @@
   "description": "Pruebas automatizadas al sistema AddInmobiliario",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run --record --key 4d7d3c8f-9b79-4029-b097-9c8991467a64"    
   },
   "keywords": [
     "QA",

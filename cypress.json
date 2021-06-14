@@ -1,1 +1,11 @@
-{}
+{
+    "experimentalNetworkStubbing": true,
+    "chromeWebSecurity": false,
+           
+    "projectId": "xwtguz",
+        
+    "video":false
+    
+    
+    
+}
