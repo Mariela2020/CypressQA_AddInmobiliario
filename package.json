@@ -1,0 +1,20 @@
+{
+  "name": "cypressqa_addinmobiliario",
+  "version": "1.0.0",
+  "description": "Pruebas automatizadas al sistema AddInmobiliario",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "QA",
+    "automation",
+    "CI-CD"
+  ],
+  "author": "Mariela Hurtado",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^7.4.0",
+    "cypress-xpath": "^1.6.2"
+  }
+}
