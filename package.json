@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Pruebas automatizadas al sistema AddInmobiliario",
   "main": "index.js",
-  "scripts": {
-    "test": "cypress run --record --key 4d7d3c8f-9b79-4029-b097-9c8991467a64"    
+  "scripts": {    
+    "cy:run": "cypress run --browser chrome --spec 'cypress/integration/test_cotizar.js' --record --key 423e3df9-c6c6-41ad-87df-6cfa4c8fee34"
   },
   "keywords": [
     "QA",

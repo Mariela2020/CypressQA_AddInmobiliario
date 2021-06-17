@@ -11,6 +11,31 @@ describe('TC AddInmobiliario-Cotizar', function()
 
   it('Flujo crear cotizacion un Inmueble',function ()  
   {
+    cy.readFile('cypress/fixtures/dataUF.json').then((data1) =>{
+      var dat = data1.fecha
+      cy.log(dat)
+      //expect(dat).to.equal(d)
+      if (dat==date)
+        {
+          cy.log('Ya se registro el Valor UF')
+          return
+        }
+      else
+        {
+          cy.log('opcion else')
+          cy.request(`https://mindicador.cl/api/uf/${date}`).as('respuestaUF')
+          cy.get('@respuestaUF').then((response) => {
+            var value = response.body.serie.map(e => e.valor).toString();
+            //var value1 = Math.round (value)
+            var someArr = { uf : (value),
+                            fecha : (date) };
+            cy.writeFile('cypress/fixtures/dataUF.json', someArr);
+            cy.writeFile('registroUF.txt', '\nUF: ' + value + ' ' + date + '  ' + hora, {flag:'a+'})
+          })
+
+        }  
+    }) 
+    
     cy.visit('https://www.addinmobiliario.cl/')
     cy.title().should('eq','AddInmobiliario') 
 

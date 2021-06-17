@@ -1,11 +1,6 @@
 {
-    "experimentalNetworkStubbing": true,
-    "chromeWebSecurity": false,
-           
-    "projectId": "xwtguz",
-        
-    "video":false
-    
-    
-    
+  "experimentalNetworkStubbing": true,
+  "chromeWebSecurity": false,
+  "video": false,
+  "projectId": "pqyeow"
 }
