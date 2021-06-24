@@ -11,30 +11,6 @@ describe('TC AddInmobiliario-Cotizar', function()
 
   it('Flujo crear cotizacion un Inmueble',function ()  
   {
-    cy.readFile('cypress/fixtures/dataUF.json').then((data1) =>{
-      var dat = data1.fecha
-      cy.log(dat)
-      //expect(dat).to.equal(d)
-      if (dat==date)
-        {
-          cy.log('Ya se registro el Valor UF')
-          return
-        }
-      else
-        {
-          cy.log('opcion else')
-          cy.request(`https://mindicador.cl/api/uf/${date}`).as('respuestaUF')
-          cy.get('@respuestaUF').then((response) => {
-            var value = response.body.serie.map(e => e.valor).toString();
-            //var value1 = Math.round (value)
-            var someArr = { uf : (value),
-                            fecha : (date) };
-            cy.writeFile('cypress/fixtures/dataUF.json', someArr);
-            cy.writeFile('registroUF.txt', '\nUF: ' + value + ' ' + date + '  ' + hora, {flag:'a+'})
-          })
-
-        }  
-    }) 
     
     cy.visit('https://www.addinmobiliario.cl/')
     cy.title().should('eq','AddInmobiliario') 
@@ -47,25 +23,30 @@ describe('TC AddInmobiliario-Cotizar', function()
     cy.get('#ctl00_cabecera1_lblvaloruf').then(function($valorelem){
 
       const valoruftxt= $valorelem.text()
-      var valoruf1= valoruftxt.replace(/\./g,"")
-      var valoruf2= valoruf1.replace(/\,/g,".")
-      var valoruf3 = parseFloat(valoruf2)
-            
+      cy.log(valoruftxt)
+     // var valoruf1= valoruftxt.replace(/\./g,"")
+     // var valoruf2= valoruf1.replace(/\,/g,".")
+     // var valoruf3 = parseFloat(valoruf2)
+     // cy.log(valoruf3)
+     
+     
+
       cy.fixture('dataUF.json').then((dataUF) => {
-        var valueUF = dataUF.uf
-        var valueUF1= valueUF.replace(/\./g,",")
-        var valueUF2= valueUF1.replace(/\,/g,".")
-        var valueUF3 = parseFloat(valueUF2)
+        var valueUF = dataUF.[d.getDate()]
+        cy.log(valueUF)
+       // var valueUF1= valueUF.replace(/\./g,",")
+       // var valueUF2= valueUF1.replace(/\,/g,".")
+       // var valueUF3 = parseFloat(valueUF2)
         
        // expect(valoruf3, "El Valor UF obtenido debe ser igual al Valor UF esperado").eq(valueUF3)
 
-        if (valoruf3==valueUF3)
+      if (valoruftxt==valueUF)
         {
-        cy.log('El Valor UF obtenido es igual al Valor UF esperado')
+         cy.log('El Valor UF obtenido es igual al Valor UF esperado')
         }
       else
         {
-        cy.writeFile('diferencia.txt', '\n\nValor UF Obtenido: ' + valoruf3 + '/ Total Resumen Esperado: ' + valueUF3 + ' ' + date + '  ' + hora, { flag: 'a+' })
+        cy.writeFile('diferencia.txt', '\n\nValor UF Obtenido: ' + valoruftxt + '/ Total Resumen Esperado: ' + valueUF + ' ' + date + '  ' + hora, { flag: 'a+' })
         }          
       })
 

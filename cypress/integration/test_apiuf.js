@@ -11,7 +11,7 @@ describe('LLamado a la API', function(){
   
   it('Verifica el registro de la UF', function(){
 
-    cy.readFile('cypress/fixtures/dataUF.json').then((data1) =>{
+    cy.readFile('cypress/fixtures/dataUF1.json').then((data1) =>{
       var dat = data1.fecha
       cy.log(dat)
       //expect(dat).to.equal(d)
@@ -29,15 +29,17 @@ describe('LLamado a la API', function(){
             //var value1 = Math.round (value)
             var someArr = { uf : (value),
                             fecha : (date) };
-            cy.writeFile('cypress/fixtures/dataUF.json', someArr);
+            cy.writeFile('cypress/fixtures/dataUF1.json', someArr);
             cy.writeFile('registroUF.txt', '\nUF: ' + value + ' ' + date + '  ' + hora, {flag:'a+'})
           })
 
-        }  
-    }) 
      
     
-  }) 
+        } 
+
+      })    
   
+
+  })
 
 })
