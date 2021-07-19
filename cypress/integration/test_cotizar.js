@@ -58,8 +58,15 @@ describe('TC AddInmobiliario-Cotizar', function()
     cy.get('#ctl00_ContentPlaceHolder1_txtRut').type('77119483-4')
     cy.get('#ctl00_ContentPlaceHolder1_txtApellidoPaterno').click()
     cy.get('#imgVivienda').click()
-    cy.get('#cb42938').click()
-    cy.get('#cbo43188').click()
+
+    cy.get('input[type="checkbox"]')
+      .each(($elem, index) => {
+    if (index === 1) {
+      cy.wrap($elem).click();
+      }
+    })
+    //cy.get('#cb42936').click()  //#cb43006
+    cy.get('#cbo43187').click()
     cy.get('#ctl00_ContentPlaceHolder1_gvBienes_DXDataRow0 > :nth-child(1)').should('be.visible').and('contain','Departamento')
     cy.get('#ctl00_ContentPlaceHolder1_txtconceptoPie_rb_uf').check()
     cy.get('#ctl00_ContentPlaceHolder1_txtconceptoPie').type('30')
@@ -88,11 +95,14 @@ describe('TC AddInmobiliario-Cotizar', function()
     
     cy.get('#ctl00_ContentPlaceHolder1_btnGuardarCotizacion').should('be.visible').and('contain','Guardar')  
     cy.get('#ctl00_ContentPlaceHolder1_btnGuardarCotizacion').click()
-    cy.wait(6000)
-    cy.get(':nth-child(2) > .cs699B7B81').should('be.visible').and('contain','COTIZACIÓN')
+    
+    //cy.wait(6000)
+
+    //cy.get(':nth-child(2) > .cs699B7B81').should('be.visible').and('contain','COTIZACIÓN')
+    
     cy.url().should('include', 'https://www.addinmobiliario.cl/Cotizacion/vistaprevia.aspx')
     cy.get('#ctl00_ContentPlaceHolder1_Button2').click()
-     
+    
   })
 
 })
