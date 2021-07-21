@@ -49,3 +49,55 @@ Valor UF Obtenido: 29.746,13/ Total Resumen Esperado: undefined 19-7-2021  12:0:
 Valor UF Obtenido: 29.746,13/ Total Resumen Esperado: undefined 19-7-2021  12:3:54
 
 Valor UF Obtenido: 29.746,13/ Total Resumen Esperado: undefined 19-7-2021  12:6:45
+
+Valor UF Obtenido: 29.747,09/ Total Resumen Esperado: undefined 20-7-2021  9:18:37
+
+Valor UF Obtenido: 29.747,09/ Total Resumen Esperado: undefined 20-7-2021  9:21:25
+
+Valor UF Obtenido: 29.747,09/ Total Resumen Esperado: undefined 20-7-2021  9:22:49
+
+Valor UF Obtenido: 29.747,09/ Total Resumen Esperado: undefined 20-7-2021  9:27:9
+
+Valor UF Obtenido: 29.747,09/ Total Resumen Esperado: undefined 20-7-2021  9:42:57
+
+Valor UF Obtenido: 29.747,09/ Total Resumen Esperado: undefined 20-7-2021  9:44:1
+
+Valor UF Obtenido: 29.747,09/ Total Resumen Esperado: undefined 20-7-2021  9:46:1
+
+Valor UF Obtenido: 29.747,09/ Total Resumen Esperado: undefined 20-7-2021  10:1:40
+
+Valor UF Obtenido: 29.747,09/ Total Resumen Esperado: undefined 20-7-2021  10:4:42
+
+Valor UF Obtenido: 29.747,09/ Total Resumen Esperado: undefined 20-7-2021  10:5:51
+
+Valor UF Obtenido: 29.747,09/ Total Resumen Esperado: undefined 20-7-2021  10:9:35
+
+Valor UF Obtenido: 29.747,09/ Total Resumen Esperado: undefined 20-7-2021  10:10:11
+
+Valor UF Obtenido: 29.747,09/ Total Resumen Esperado: undefined 20-7-2021  10:21:2
+
+Valor UF Obtenido: 29.747,09/ Total Resumen Esperado: undefined 20-7-2021  10:29:38
+
+Valor UF Obtenido: 29.747,09/ Total Resumen Esperado: undefined 20-7-2021  10:29:50
+
+Valor UF Obtenido: 29.747,09/ Total Resumen Esperado: undefined 20-7-2021  10:34:15
+
+Valor UF Obtenido: 29.747,09/ Total Resumen Esperado: undefined 20-7-2021  10:34:49
+
+Valor UF Obtenido: 29.747,09/ Total Resumen Esperado: undefined 20-7-2021  10:36:30
+
+Valor UF Obtenido: 29.747,09/ Total Resumen Esperado: undefined 20-7-2021  10:37:17
+
+Valor UF Obtenido: 29.747,09/ Total Resumen Esperado: undefined 20-7-2021  10:39:22
+
+Valor UF Obtenido: 29.747,09/ Total Resumen Esperado: undefined 20-7-2021  10:57:31
+
+Valor UF Obtenido: 29.747,09/ Total Resumen Esperado: undefined 20-7-2021  10:59:40
+
+Valor UF Obtenido: 29.747,09/ Total Resumen Esperado: undefined 20-7-2021  11:3:50
+
+Valor UF Obtenido: 29.747,09/ Total Resumen Esperado: undefined 20-7-2021  11:5:3
+
+Valor UF Obtenido: 29.747,09/ Total Resumen Esperado: undefined 20-7-2021  11:5:31
+
+Valor UF Obtenido: 29.748,05/ Total Resumen Esperado: undefined 21-7-2021  9:36:51

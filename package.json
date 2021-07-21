@@ -4,7 +4,7 @@
   "description": "Pruebas automatizadas al sistema AddInmobiliario",
   "main": "index.js",
   "scripts": {    
-    "cy:run": "cypress run --config pageLoadTimeout=100000 --browser chrome --spec 'cypress/integration/test_cotizar.js' --record --key 423e3df9-c6c6-41ad-87df-6cfa4c8fee34"
+    "cy:run": "cypress run --browser chrome --spec 'cypress/integration/test_cotizar.js' --record --key 423e3df9-c6c6-41ad-87df-6cfa4c8fee34"
   },
   "keywords": [
     "QA",

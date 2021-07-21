@@ -9,7 +9,7 @@ describe('TC AddInmobiliario-Cotizar', function()
     d.getMinutes(),
     d.getSeconds()].join(':')
 
-  it('Flujo crear cotizacion un Inmueble',function ()  
+  it('Flujo crear cotizacion de Inmueble',function ()  
   {
     
     cy.visit('https://www.addinmobiliario.cl/')
@@ -93,13 +93,13 @@ describe('TC AddInmobiliario-Cotizar', function()
         cy.get('#ctl00_ContentPlaceHolder1_CheckLlegada_0').check()
       }
     
-    cy.get('#ctl00_ContentPlaceHolder1_btnGuardarCotizacion').should('be.visible').and('contain','Guardar')  
-    cy.get('#ctl00_ContentPlaceHolder1_btnGuardarCotizacion').click()
+    //cy.get('#ctl00_ContentPlaceHolder1_btnGuardarCotizacion').should('be.visible').and('contain','Guardar')  
+    cy.get('#ctl00_ContentPlaceHolder1_btnGuardarCotizacion').should('be.visible').click()
     
     //cy.wait(6000)
 
-    //cy.get(':nth-child(2) > .cs699B7B81').should('be.visible').and('contain','COTIZACIÓN')
-    
+    cy.get(':nth-child(2) > .cs699B7B81', {timeout:20000}).should('be.visible')
+    //cy.get(':nth-child(2) > .cs699B7B81').should('be.visible')
     cy.url().should('include', 'https://www.addinmobiliario.cl/Cotizacion/vistaprevia.aspx')
     cy.get('#ctl00_ContentPlaceHolder1_Button2').click()
     
