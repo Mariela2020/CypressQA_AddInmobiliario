@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Pruebas automatizadas al sistema AddInmobiliario",
   "main": "index.js",
-  "scripts": {    
-    "cy:run": "cypress run --browser chrome --spec 'cypress/integration/test_cotizar.js' --record --key 423e3df9-c6c6-41ad-87df-6cfa4c8fee34"
+  "scripts": {
+    "cy:run:add": "cypress run --browser chrome --record --key 423e3df9-c6c6-41ad-87df-6cfa4c8fee34"
   },
   "keywords": [
     "QA",
@@ -15,6 +15,11 @@
   "license": "ISC",
   "dependencies": {
     "cypress": "^7.4.0",
-    "cypress-xpath": "^1.6.2"
+    "cypress-cucumber-preprocessor": "^4.2.0",
+    "cypress-xpath": "^1.6.2",
+    "mochawesome": "^6.2.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/integration/features/step_definitions/**/"
   }
 }
