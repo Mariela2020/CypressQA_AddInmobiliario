@@ -7,15 +7,12 @@ const d = new Date
 
   const hora = [d.getHours(),
     d.getMinutes(),
-    d.getSeconds()].join(':')
+    d.getSeconds()].join(':')  
 
 Given('Obtiene y registra las metricas', () =>{
 
     cy.readFile('cypress/results/mochawesome.json').then((data) =>{
-            cy.log(data)
-            var fecha = data.stats.end
-            cy.log(fecha)
-            cy.log(hora)
+            
             var duracion = data.results[0].suites[0].tests[0].duration
             cy.log(duracion)
             var resultado = data.results[0].suites[0].tests[0].state

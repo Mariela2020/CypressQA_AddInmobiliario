@@ -4,7 +4,7 @@
   "description": "Pruebas automatizadas al sistema AddInmobiliario",
   "main": "index.js",
   "scripts": {
-    "cy:run:add": "cypress run --browser chrome --record --key 423e3df9-c6c6-41ad-87df-6cfa4c8fee34"
+    "cy:run:add": "cypress run --browser firefox --config pageLoadTimeout=30000 --record --key 423e3df9-c6c6-41ad-87df-6cfa4c8fee34"
   },
   "keywords": [
     "QA",

@@ -116,14 +116,14 @@ And('Selecciona el inmueble, financiamiento y medio de llegada', ()=>{
 
 And('Hace click al botón Guardar', ()=>{
 
-    //cy.get('#ctl00_ContentPlaceHolder1_btnGuardarCotizacion').should('be.visible').and('contain','Guardar')  
+    //cy.get('#ctl00_ContentPlaceHolder1_btnGuardarCotizacion').click()  
     cy.xpath('//*[@id="ctl00_ContentPlaceHolder1_btnGuardarCotizacion"]').click()
-    //cy.wait(6000)
+   // cy.get('#ctl00_ContentPlaceHolder1_btnGuardarCotizacion').should('be.visible').and('contain','Procesando..')
 })
 
 Then('Se debe redireccionar al Detalle de la contización y la crea', ()=>{
 
-    cy.get(':nth-child(2) > .cs699B7B81', {timeout:20000}).should('be.visible')
+    cy.get(':nth-child(2) > .cs699B7B81', {timeout:10000})
     //cy.get(':nth-child(2) > .cs699B7B81').should('be.visible')
     cy.url().should('include', 'https://www.addinmobiliario.cl/Cotizacion/vistaprevia.aspx')
     cy.get('#ctl00_ContentPlaceHolder1_Button2').click()
