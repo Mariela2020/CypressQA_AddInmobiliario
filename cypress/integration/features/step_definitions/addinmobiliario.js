@@ -123,7 +123,7 @@ And('Hace click al botón Guardar', ()=>{
 
 Then('Se debe redireccionar al Detalle de la contización y la crea', ()=>{
 
-    cy.get(':nth-child(2) > .cs699B7B81', {timeout:10000})
+    cy.get(':nth-child(2) > .cs699B7B81', {timeout:20000})
     //cy.get(':nth-child(2) > .cs699B7B81').should('be.visible')
     cy.url().should('include', 'https://www.addinmobiliario.cl/Cotizacion/vistaprevia.aspx')
     cy.get('#ctl00_ContentPlaceHolder1_Button2').click()
