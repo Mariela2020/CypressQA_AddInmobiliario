@@ -35,18 +35,17 @@ And('Comparar el valor de la UF', ()=>{
        // var valoruf2= valoruf1.replace(/\,/g,".")
        // var valoruf3 = parseFloat(valoruf2)
        // cy.log(valoruf3)
-       
   
-        cy.fixture('dataUF.json').then((dataUF) => {
-          var valueUF = dataUF.[d.getDate()]
-          cy.log(valueUF)
+        cy.fixture('dataUF2.json').then((dataUF) => {
+          var valoruf = dataUF.[d.getDate()-1].valor
+          cy.log(valoruf)
          // var valueUF1= valueUF.replace(/\./g,",")
          // var valueUF2= valueUF1.replace(/\,/g,".")
          // var valueUF3 = parseFloat(valueUF2)
           
          // expect(valoruf3, "El Valor UF obtenido debe ser igual al Valor UF esperado").eq(valueUF3)
   
-        if (valoruftxt==valueUF)
+        if (valoruftxt==valoruf)
           {
            cy.log('El Valor UF obtenido es igual al Valor UF esperado')
           }
