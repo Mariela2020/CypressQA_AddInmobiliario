@@ -73,7 +73,7 @@ When('Cuando el usuario ingresa el Rut del Cliente', ()=>{
 
 })  
 
-And('Selecciona el inmueble, financiamiento y medio de llegada', ()=>{
+And('Selecciona el inmueble principal y secundario', ()=>{
 
     cy.get('#imgVivienda').click()
 
@@ -85,6 +85,11 @@ And('Selecciona el inmueble, financiamiento y medio de llegada', ()=>{
     })
     //cy.get('#cb42936').click()  //#cb43006
     cy.get('#cbo43187').click()
+
+  })
+  
+And('Selecciona el financiamiento', ()=>{
+
     cy.get('#ctl00_ContentPlaceHolder1_gvBienes_DXDataRow0 > :nth-child(1)').should('be.visible').and('contain','Departamento')
     cy.get('#ctl00_ContentPlaceHolder1_txtconceptoPie_rb_uf').check()
     cy.get('#ctl00_ContentPlaceHolder1_txtconceptoPie').type('30')
@@ -101,6 +106,10 @@ And('Selecciona el inmueble, financiamiento y medio de llegada', ()=>{
     
     cy.get('#ctl00_ContentPlaceHolder1_gvDividendo_DXTDGScol6 > table > tbody > tr > td').should('be.visible')
 
+  })
+  
+And('Selecciona el medio de llegada', ()=>{
+  
     if(cy.get('#ctl00_ContentPlaceHolder1_CheckLlegada_0').should('be.visible'))
       {
         cy.get('#ctl00_ContentPlaceHolder1_CheckLlegada_0').check()
@@ -115,14 +124,41 @@ And('Selecciona el inmueble, financiamiento y medio de llegada', ()=>{
 
 And('Hace click al botón Guardar', ()=>{
 
+  cy.wait(2000)
+  const btn_guardar =  "#ctl00_ContentPlaceHolder1_btnGuardarCotizacion"
+  cy.get(btn_guardar).should('exist').and('not.be.disabled')
+  cy.get(btn_guardar).invoke('width').should('be.greaterThan', 0)
+  cy.get(btn_guardar).invoke('height').should('be.greaterThan', 0)
+  cy.get(btn_guardar).as('guardarbtn')
+  cy.get('@guardarbtn', {timeout:10000}).click({force: true})
+
+  
+  //cy.get('#ctl00_ContentPlaceHolder1_lnkVistaPrevia').click({force: true})
+  
+  // cy.get('#ctl00_ContentPlaceHolder1_btnGuardarCotizacion').click()
+   
     //cy.get('#ctl00_ContentPlaceHolder1_btnGuardarCotizacion').click()  
-    cy.xpath('//*[@id="ctl00_ContentPlaceHolder1_btnGuardarCotizacion"]').click()
-   // cy.get('#ctl00_ContentPlaceHolder1_btnGuardarCotizacion').should('be.visible').and('contain','Procesando..')
+   /* cy.get('#ctl00_ContentPlaceHolder1_btnGuardarCotizacion').should('be.visible').invoke('width').should('be.greaterThan', 0)
+    cy.get('#ctl00_ContentPlaceHolder1_btnGuardarCotizacion').should('be.visible').invoke('height').should('be.greaterThan', 0)
+    cy.wait(1000)
+    cy.get('#ctl00_ContentPlaceHolder1_btnGuardarCotizacion').click({force: true})
+    cy.xpath('//*[@id="ctl00_ContentPlaceHolder1_btnGuardarCotizacion"]').should('be.visible').and('contain','Procesando..')
+   */  
+    // cy.get('#ctl00_ContentPlaceHolder1_btnGuardarCotizacion')
+   // https://www.addinmobiliario.cl/Cotizacion/vistaprevia.aspx?qs=0Lw|dY6Emjs=&lnkVolver=UOVUNRZW5EolUK4Df|62IHoOQ0eEMp0I0PjOi7zsFVLONfbQygKsKQ==&lnkGenerar=xFuZda|Yrt70aYJ0mHUuPA==&numero=uC0PNHBtku4= 
+    // cy.get('#ctl00_ContentPlaceHolder1_btnGuardarCotizacion')
+    //page.startDateButton.then($btn => $btn.click())
+    //cy.xpath('//*[@id="ctl00_ContentPlaceHolder1_btnGuardarCotizacion"]').invoke('width').should('be.greaterThan', 0)
+   //cy.xpath('//*[@id="ctl00_ContentPlaceHolder1_btnGuardarCotizacion"]').click({ force: true })
+   //cy.xpath('//*[@id="ctl00_ContentPlaceHolder1_btnGuardarCotizacion"]').should('be.visible').and('contain','Procesando..')
+  
+   //cy.wait(6000)
 })
 
-Then('Se debe redireccionar al Detalle de la contización y la crea', ()=>{
+Then('Se debe redireccionar al Detalle de la cotización y la crea', ()=>{
 
-    cy.get(':nth-child(2) > .cs699B7B81', {timeout:20000})
+  //cy.log("ciclo then")
+    cy.get(':nth-child(2) > .cs699B7B81', {timeout:10000})
     //cy.get(':nth-child(2) > .cs699B7B81').should('be.visible')
     cy.url().should('include', 'https://www.addinmobiliario.cl/Cotizacion/vistaprevia.aspx')
     cy.get('#ctl00_ContentPlaceHolder1_Button2').click()
