@@ -6,7 +6,7 @@
 
   "testFiles": "**/*.feature",
 
-  "projectId": "pqyeow",
+  "projectId": "5mynrt",
 
   "reporter": "mochawesome",
   "reporterOptions": {

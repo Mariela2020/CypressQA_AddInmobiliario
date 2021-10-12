@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cy:run:add": "cypress run --browser chrome --config pageLoadTimeout=30000",
-    "cy:run:add1": "cypress run --browser chrome --config pageLoadTimeout=30000 --record --key 423e3df9-c6c6-41ad-87df-6cfa4c8fee34"
+    "cy:run:add1": "cypress run --browser chrome --config pageLoadTimeout=30000 --record --key 53c60f69-2a4c-4432-be9f-dbe0a8fd99a8"
   },
   "keywords": [
     "QA",

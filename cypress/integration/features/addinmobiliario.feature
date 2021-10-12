@@ -9,8 +9,8 @@ Feature: AddInmobiliario
       And Comparar el valor de la UF
       And Hace click sobre el menú gestión venta - Cotizaciones - Crear Cotizaciones
      When Cuando el usuario ingresa el Rut del Cliente
-      And Selecciona el inmueble principal y secundario
-      And Selecciona el financiamiento 
-      And Selecciona el medio de llegada 
+      And Selecciona el Inmueble, Estacionamiento y Bodega
+      #And Aplica Descuento
+      And Selecciona el financiamiento y medio de llegada
       And Hace click al botón Guardar
      Then Se debe redireccionar al Detalle de la cotización y la crea 

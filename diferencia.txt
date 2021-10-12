@@ -183,3 +183,5 @@ Valor UF Obtenido: 29.796,90/ Total Resumen Esperado: undefined 13-8-2021  16:55
 Valor UF Obtenido: 29.796,90/ Total Resumen Esperado: undefined 13-8-2021  17:1:40
 
 Valor UF Obtenido: 29.796,90/ Total Resumen Esperado: undefined 13-8-2021  17:6:20
+
+Valor UF Obtenido: 30.159,23/ Total Resumen Esperado: 30.060,36 12-10-2021  11:8:24
