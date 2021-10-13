@@ -1,0 +1,41 @@
+{
+  "id": "a1tWPppv3EWbqmOr6OAQ6A",
+  "platform": "Web",
+  "executionStart": "2021-10-13T13:15:12.94Z",
+  "executionEnd": "2021-10-13T13:16:52.366Z",
+  "resultType": "Passed",
+  "passRatio": 100,
+  "agentName": "AgenteQA",
+  "agentId": "KPYE6gt-Q0KD3ajx-vk0cA",
+  "jobId": "AMpFmdxxqkW3EHyo-sfL5g",
+  "jobName": "AddInmobiliario",
+  "passedTests": 1,
+  "failedTests": 0,
+  "skippedTests": 0,
+  "trigger": "CI Jenkins build: 4",
+  "testResults": [
+    {
+      "name": "AddInmobiliario",
+      "executionStart": "2021-10-13T13:16:02.014Z",
+      "executionEnd": "0001-01-01T00:00:00Z",
+      "duration": "00:00:49.966",
+      "result": "Passed",
+      "targets": [
+        {
+          "targetName": "Chrome 94.0.4606.81",
+          "result": "Passed",
+          "passRatio": 100,
+          "failRatio": 0,
+          "executionStart": "2021-10-13T13:16:02.014Z",
+          "executionEnd": "2021-10-13T13:16:51.981Z",
+          "duration": "00:00:49.967",
+          "failedSteps": []
+        }
+      ]
+    }
+  ],
+  "reportUrl": "https://app.testproject.io/#/reports/projects/526859/jobs/AMpFmdxxqkW3EHyo-sfL5g/execution/a1tWPppv3EWbqmOr6OAQ6A?es=2021-10-13T13:15:12.940Z",
+  "tags": [
+    "Add"
+  ]
+}
